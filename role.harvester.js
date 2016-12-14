@@ -33,6 +33,6 @@ module.exports = {
         });
     },
     findEnergy: function(creep) {
-        return creep.room.find(FIND_SOURCES_ACTIVE)[1]; //42, 21
+        return creep.room.find(FIND_SOURCES_ACTIVE)[1];
     }
 };

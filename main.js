@@ -10,7 +10,7 @@ module.exports.loop = function() {
         harvester.create();
         upgrader.create();
         builder.create();
-        //attacker.create();
+        attacker.create();
         repairer.create();
     }
     

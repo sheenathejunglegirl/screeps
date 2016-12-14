@@ -1,7 +1,7 @@
 var _ = require('lodash');
 
 module.exports = {
-    NUMBER_OF_CREEPS: 1,
+    NUMBER_OF_CREEPS: 2,
     work: function(creep) {
         if (creep.carry.energy == creep.carryCapacity || (creep.memory.task == 'upgrade' && creep.carry.energy > 0)) {
             var controllerPoint = this.findController(creep);
@@ -22,7 +22,7 @@ module.exports = {
     create: function() {
         var upgraders = _.filter(Game.creeps, {memory: {role: 'upgrader'}});
         if (_.size(upgraders) < this.NUMBER_OF_CREEPS) {
-            Game.spawns['Spawn1'].createCreep([MOVE,WORK,WORK,CARRY], null, {role: 'upgrader', task: 'harvest'});
+            Game.spawns['Spawn1'].createCreep([MOVE,WORK,CARRY], null, {role: 'upgrader', task: 'harvest'});
         }
     },
     findController: function(creep) {
